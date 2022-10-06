@@ -70,9 +70,46 @@ body {
 }
 
 .result {
+  width: 15rem;
+  position: absolute;
+  top: -15%;
+  left: auto;
+  background-color: #90e990;
+  border-radius: 5px;
+  padding: 1.2rem;
+  transition: all 1s ease-in-out;
+}
+
+/* .forword {
+  animation: slide 1s linear;
+}
+
+.reverse {
+  animation: slide 1s reverse linear;
+}
+@keyframes slide {
+  0% {
+    top: -15%;
+    opacity: 0;
+  }
+  100% {
+    top: 15%;
+    opacity: 1;
+  }
+} */
+
+.cancel {
+  color: #111111;
   position: absolute;
   top: 10%;
-  left: 40%;
-  background-color: #90e990;
-  padding: 1rem 2rem;
+  right: 7%;
+  transition: all 0.2s ease-in-out;
+}
+
+.cancel:hover {
+  transform: scale(1.4);
+}
+
+.cancel:active {
+  transform: scale(0.8);
 }
