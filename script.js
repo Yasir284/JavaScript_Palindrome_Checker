@@ -6,16 +6,30 @@ let result = document.querySelector(".result");
 let icon = result.querySelector("h2 i");
 let h2 = result.querySelector("h2 span");
 let p = result.querySelector("p");
-
+let i = 0;
 function check() {
+  result.classList.add("hide");
+  result.classList.remove("forword");
+  result.classList.remove("reverse");
   let txt = text.value;
   if (txt == "") {
-    alert("Please Enter Text");
+    result.style.background = "#ffc796";
+    h2.textContent = "Enter text first !";
+    p.textContent = "";
+    if (
+      icon.classList.contains("fa-circle-xmark") ||
+      icon.classList.contains("fa-circle-check")
+    ) {
+      icon.classList.remove(icon.classList[1]);
+    }
   } else {
     txt = text.value
       .split("")
       .map((val) => val.toLowerCase().trim())
-      .filter((val) => val != "" && val != " " && val != ".");
+      .filter(
+        (val) =>
+          val != "" && val != " " && val != "." && val != "," && val != "?"
+      );
     console.log(txt);
 
     if (txt.join("") == txt.reverse().join("")) {
@@ -35,16 +49,23 @@ function check() {
         "The Text is not Palindrome"
       );
     }
-
-    result.style.transform = "translateY(0rem) translateY(12rem)";
   }
+  setTimeout(() => {
+    result.classList.remove("hide");
+  }, 10);
+
+  setTimeout(() => {
+    result.classList.add("forword");
+  }, 100);
 }
 
 function cancel() {
-  result.style.transform = "translateY(12rem) translateY(-12rem)";
+  result.classList.add("reverse");
+  result.classList.remove("forword");
 }
 
 function clearText() {
+  cancel();
   text.value = "";
 }
 
