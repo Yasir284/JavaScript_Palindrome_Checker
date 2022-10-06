@@ -2,9 +2,9 @@
 ![badge](https://img.shields.io/badge/TIME%20TAKEN-4%20to%205%20hrs-red)
 [![badge](https://img.shields.io/badge/SEE%20DEMO%20-VISIT-green)](https://javascript-palindromeapp-project6.netlify.app/)
 
-# JavaScript Palindrome App
+# JavaScript Palindrome Checker
 
-- This is Javascript Project. In this project I have made a **Palindrome App** with JavaSript, which checks wether the text or number is palindrome or not.
+- This is Javascript Project. In this project I have made a **Palindrome Checker** with JavaSript, which checks wether the text or number is palindrome or not.
 
 - It took me 4-5 hrs to make this project. Please find the link below.
 
